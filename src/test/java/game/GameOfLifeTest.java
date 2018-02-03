@@ -31,8 +31,45 @@ public class GameOfLifeTest {
 
     @Test
     public void test2d() {
-        boolean[][] area = {{false, true, false}, {false, true, false}, {false, true, false}};
-        final boolean[][] expected = {{false, false, false}, {false, true, false}, {false, false, false}};
+        boolean[][] area = {
+                {false, true, false},
+                {false, true, false},
+                {false, true, false}};
+
+        final boolean[][] expected = {
+                {false, false, false},
+                {true, true, true},
+                {false, false, false}};
+
         Assert.assertArrayEquals(expected, GameOfLife.tick(area));
     }
+
+    @Test
+    public void test3d() {
+        boolean[][] area = {
+                {false, true, false},
+                {true, true, false},
+                {false, true, false}};
+
+        final boolean[][] expected = {
+                {true, true, false},
+                {true, true, true},
+                {true, true, false}};
+        Assert.assertArrayEquals(expected, GameOfLife.tick(area));
+    }
+
+    @Test
+    public void test4d() {
+        boolean[][] area = {
+                {false, true, false, true},
+                {true, false, false, false},
+                {false, true, false, true}};
+
+        final boolean[][] expected = {
+                {false, false, false, false},
+                {true, true, false, false},
+                {false, false, false, false}};
+        Assert.assertArrayEquals(expected, GameOfLife.tick(area));
+    }
+
 }
