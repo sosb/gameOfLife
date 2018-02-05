@@ -30,7 +30,7 @@ public class GameOfLifeTest {
     }
 
     @Test
-    public void test2d() {
+    public void test2() {
         boolean[][] area = {
                 {false, true, false},
                 {false, true, false},
@@ -45,7 +45,7 @@ public class GameOfLifeTest {
     }
 
     @Test
-    public void test3d() {
+    public void test3() {
         boolean[][] area = {
                 {false, true, false},
                 {true, true, false},
@@ -59,7 +59,7 @@ public class GameOfLifeTest {
     }
 
     @Test
-    public void test4d() {
+    public void test4() {
         boolean[][] area = {
                 {false, true, false, true},
                 {true, false, false, false},
